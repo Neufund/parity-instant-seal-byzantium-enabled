@@ -1,4 +1,4 @@
-# Parity Private Neufund Chain
+# Parity with instantSeal engine and byzantium EIPs enabled
 
 This is parity instantSeal byzantium enabled development mode
 
@@ -8,10 +8,14 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-Clode repository and build docker container
+Clone repository and build docker container
 ```
 docker-compose -p eth_parity_dev_node -f docker-compose.yml up --build -d
 ```
+
+### Parity version
+
+We clone and build `1.8.0-beta`
 
 ## Connecting to node
 
