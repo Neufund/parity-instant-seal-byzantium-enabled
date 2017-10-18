@@ -1,0 +1,56 @@
+{
+	"name": "nfdev",
+	"engine": {
+		"instantSeal": null
+	},
+	"params": {
+        "accountStartNonce": "0x0",
+        "gasLimitBoundDivisor": "0x400",
+        "maximumExtraDataSize": "0x20",
+        "minGasLimit": "0x1",
+        "networkID" : "0x11",
+				"eip150Transition": "0x0",
+        "eip160Transition": "0x0",
+        "eip161abcTransition": "0x0",
+        "eip161dTransition": "0x0",
+        "eip649Reward": "0x29A2241AF62C0000",
+        "eip100bTransition": "0x0",
+        "eip649Transition": "0x0",
+				"eip98Transition": "0xffffffffffffffff",
+        "eip140Transition": "0x0",
+        "eip211Transition": "0x0",
+        "eip214Transition": "0x0",
+        "eip155Transition": "0x0",
+        "eip658Transition": "0x0"
+				
+    },
+    "genesis": {
+        "seal": {
+            "generic": "0x0"
+        },
+        "difficulty": "0x20000",
+        "author": "0x0000000000000000000000000000000000000000",
+        "timestamp": "0x00",
+        "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "extraData": "0x",
+        "gasLimit": "0x632EA0"
+    },
+	"accounts": {
+		"0000000000000000000000000000000000000001": { "builtin": { "name": "ecrecover", "pricing": { "linear": { "base": 3000, "word": 0 } } } },
+		"0000000000000000000000000000000000000002": { "builtin": { "name": "sha256", "pricing": { "linear": { "base": 60, "word": 12 } } } },
+		"0000000000000000000000000000000000000003": { "builtin": { "name": "ripemd160", "pricing": { "linear": { "base": 600, "word": 120 } } } },
+		"0000000000000000000000000000000000000004": { "builtin": { "name": "identity", "pricing": { "linear": { "base": 15, "word": 3 } } } },
+		"0000000000000000000000000000000000000005": { "builtin": { "name": "modexp", "activate_at": 5, "pricing": { "modexp": { "divisor": 20 } } } },
+		"0000000000000000000000000000000000000006": { "builtin": { "name": "alt_bn128_add", "activate_at": 5, "pricing": { "linear": { "base": 500, "word": 0 } } } },
+		"0000000000000000000000000000000000000007": { "builtin": { "name": "alt_bn128_mul", "activate_at": 5, "pricing": { "linear": { "base": 40000, "word": 0 } } } },
+		"0000000000000000000000000000000000000008": { "builtin": { "name": "alt_bn128_pairing", "activate_at": 5, "pricing": { "alt_bn128_pairing": { "base": 100000, "pair": 80000 } } } },
+		"0x00b1da87C22608F90f1E34759Cd1291c8A4E4b25": {	"balance": "606938044258990275541962092341162602522202993782792835301376" },
+		"0x700f98B33992cC073744D331d70037ba0d2Bca45": {	"balance": "606938044258990275541962092341162602522202993782792835301376" },
+		"0x79d7176aE8F93A04bC73b9BC710d4b44f9e362Ce": {	"balance": "606938044258990275541962092341162602522202993782792835301376" },
+		"0x84B07cd505f3257782b96a3e121aC1F5D1Cae32F": {	"balance": "606938044258990275541962092341162602522202993782792835301376" },
+		"0xf18938A83cff0aE67dc105155469556D4224C48F": {	"balance": "606938044258990275541962092341162602522202993782792835301376" },
+		"0xf40011040398947B3C6B7532ed23fBc8C19c9654": {	"balance": "606938044258990275541962092341162602522202993782792835301376" },
+		"0x2e6D01625685281A1E3d10e4B41a61b4E6acb55F": { "balance": "606938044258990275541962092341162602522202993782792835301376" },
+		"0xE012160eD101D0Ac1c8321f9af5f9d7A332c6034": { "balance": "606938044258990275541962092341162602522202993782792835301376" }
+	}
+}
