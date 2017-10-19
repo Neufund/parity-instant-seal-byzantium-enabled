@@ -12,7 +12,10 @@ Clone repository and build docker container
 ```
 docker-compose -p eth_parity_dev_node -f docker-compose.yml up --build -d
 ```
-
+In case of linux run
+```
+sudo docker-compose -p eth_parity_dev_node -f docker-compose.yml up --build -d
+```
 ### Parity version
 
 We clone and build `1.8.0-beta`
