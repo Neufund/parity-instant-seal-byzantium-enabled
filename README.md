@@ -22,7 +22,7 @@ We clone and build `1.8.0-beta`
 To connect to web interface of the node
 
 ```
-http://127.0.0.1:8180/#/auth?token=vTy3cgEfz2hYdusI
+http://127.0.0.1:8180/
 ```
 For the first generation of authentication token you need to issue command
 ```

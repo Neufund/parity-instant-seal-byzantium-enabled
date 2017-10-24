@@ -64,8 +64,5 @@ RUN mkdir /var/parity/keys
 RUN mkdir /var/parity/keys/nfdev/
 COPY keys/ /var/parity/keys/nfdev/
 
-#RUN file /build/parity/target/release/parity
-
 EXPOSE 8080 8545 8546 8180 30303
-#ENTRYPOINT ["/build/parity/target/release/parity"]
 CMD ["/usr/bin/supervisord"]
