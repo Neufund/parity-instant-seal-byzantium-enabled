@@ -50,9 +50,9 @@ gcc -v &&\
 g++ -v
 
 # build parity 1.8.0 beta
-RUN git clone https://github.com/paritytech/parity.git && \
+RUN git clone https://github.com/Neufund/parity.git && \
         cd parity && \
-        git checkout 9882902f312fd720b839df9aac45bc7d30c01590 && \
+        git checkout v1.8.7-neufund && \
         cargo build --release --verbose && \
         ls /build/parity/target/release/parity && \
         strip /build/parity/target/release/parity
