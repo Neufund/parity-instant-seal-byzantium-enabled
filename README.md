@@ -18,7 +18,7 @@ sudo docker-compose -p eth_parity_dev_node -f docker-compose.yml up --build -d
 ```
 ### Parity version
 
-We clone and build `1.8.7` neufund mod (additional eth_getLogDetails RPC command)
+We use `parity_1.9.5_ubuntu_amd64.deb` from parity website.
 
 ## Connecting to node
 
