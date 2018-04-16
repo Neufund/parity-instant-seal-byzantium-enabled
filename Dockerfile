@@ -1,68 +1,23 @@
-FROM ubuntu:14.04
-WORKDIR /build
+FROM ubuntu:xenial
 
-# add miner repo
 RUN apt-get update && \
-        apt-get install -y software-properties-common && \
-	add-apt-repository ppa:ethereum/ethereum
+    apt-get install -y \
+    curl \
+    supervisor;
 
-# install tools and dependencies
-RUN apt-get update && \
-        apt-get install -y \
-        build-essential \
-        g++ \
-        curl \
-        git \
-        file \
-        binutils \
-	pkg-config \
-	libssl-dev \
-        libudev-dev \
-        python \
-        make \
-        ca-certificates \
-        zip \
-        dpkg-dev \
-        rhash \
-        openssl \
-        gcc \
-        libc6 \
-        libc6-dev \
-        ethminer \
-	supervisor
+RUN curl --fail -o parity.deb http://d1h4xl4cr1h0mo.cloudfront.net/v1.9.6/x86_64-unknown-linux-gnu/parity_1.9.6_ubuntu_amd64.deb
 
-# install rustup
-RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+RUN dpkg -i parity.deb
 
-# rustup directory
-ENV PATH /root/.cargo/bin:$PATH
-
-#downgrade rustup
-#RUN rustup install 1.18.0 && rustup default 1.18.0-x86_64-unknown-linux-gnu
-
-# show backtraces
-ENV RUST_BACKTRACE 1
-
-# show tools
-RUN rustc -vV && \
-cargo -V && \
-gcc -v &&\
-g++ -v
-
-# build parity 1.8.0 beta
-RUN git clone https://github.com/Neufund/parity.git && \
-        cd parity && \
-        git checkout v1.8.7-neufund && \
-        cargo build --release --verbose && \
-        ls /build/parity/target/release/parity && \
-        strip /build/parity/target/release/parity
+RUN mkdir /var/parity && \
+    mkdir /var/parity/keys && \
+    mkdir /var/parity/keys/nfdev/;
 
 COPY nfdev.json /var/parity/chains/nfdev.json
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-COPY password /build/
-RUN mkdir /var/parity/keys
-RUN mkdir /var/parity/keys/nfdev/
 COPY keys/ /var/parity/keys/nfdev/
+COPY password /var/parity/password
+
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 EXPOSE 8080 8545 8546 8180 30303
 CMD ["/usr/bin/supervisord"]
