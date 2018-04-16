@@ -2,13 +2,14 @@ FROM ubuntu:xenial
 
 RUN apt-get update && \
     apt-get install -y \
-    wget \
-    supervisor; \
+    curl \
+    supervisor;
 
-    wget https://d1h4xl4cr1h0mo.cloudfront.net/stable-release/x86_64-unknown-linux-gnu/parity_1.9.5_ubuntu_amd64.deb && \
-    dpkg -i parity_1.9.5_ubuntu_amd64.deb; \
+RUN curl --fail -o parity.deb http://d1h4xl4cr1h0mo.cloudfront.net/v1.9.6/x86_64-unknown-linux-gnu/parity_1.9.6_ubuntu_amd64.deb
 
-    mkdir /var/parity && \
+RUN dpkg -i parity.deb
+
+RUN mkdir /var/parity && \
     mkdir /var/parity/keys && \
     mkdir /var/parity/keys/nfdev/;
 
