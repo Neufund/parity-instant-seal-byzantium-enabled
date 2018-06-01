@@ -12,13 +12,9 @@ Clone repository and build docker container
 ```
 docker-compose -p eth_parity_dev_node -f docker-compose.yml up --build -d
 ```
-In case of linux run
-```
-sudo docker-compose -p eth_parity_dev_node -f docker-compose.yml up --build -d
-```
 ### Parity version
 
-We use `parity_1.9.5_ubuntu_amd64.deb` from parity website.
+We use `parity_1.9.7_ubuntu_amd64.deb` from parity website.
 
 ## Connecting to node
 
@@ -27,11 +23,8 @@ To connect to web interface of the node
 ```
 http://127.0.0.1:8180/
 ```
-For the first generation of authentication token you need to issue command
-```
-parity signer new-token
-```
-And make sure that authtokens file is in /var/parity/signer (it's a volume)
+
+We put predefined authcodes into /var/parity/signer so if you connect remotely see `authcodes` file. Also remember to expose 8546 port (web socket), otherwise UI will not log in.
 
 ### Deployment with Truffle
 

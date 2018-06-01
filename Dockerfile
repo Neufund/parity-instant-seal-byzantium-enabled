@@ -5,7 +5,7 @@ RUN apt-get update && \
     curl \
     supervisor;
 
-RUN curl --fail -o parity.deb http://d1h4xl4cr1h0mo.cloudfront.net/v1.9.6/x86_64-unknown-linux-gnu/parity_1.9.6_ubuntu_amd64.deb
+RUN curl --fail -o parity.deb http://d1h4xl4cr1h0mo.cloudfront.net/v1.9.7/x86_64-unknown-linux-gnu/parity_1.9.7_ubuntu_amd64.deb
 
 RUN dpkg -i parity.deb
 
@@ -16,6 +16,7 @@ RUN mkdir /var/parity && \
 COPY nfdev.json /var/parity/chains/nfdev.json
 COPY keys/ /var/parity/keys/nfdev/
 COPY password /var/parity/password
+COPY authcodes /var/parity/signer/authcodes
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
