@@ -26,6 +26,13 @@ http://127.0.0.1:8180/
 
 We put predefined authcodes into /var/parity/signer so if you connect remotely see `authcodes` file. Also remember to expose 8546 port (web socket), otherwise UI will not log in.
 
+## Simulate new blocks
+If you want you can simulate new blocks that will be "mined" every 10s even if you won't issue any transactions. To enable this functionality you need to set env variable.
+```
+SIMULATE_BLOCKS=true
+```
+This will run a simple bash script that will run every 10s that will send 0eth transfer from one of the unlocked accounts to itself.
+
 ### Deployment with Truffle
 
 Parity will not work with Truffle. Truffle expects null returned as receipt when transaction is still pending, parity returns normal receipt but with blockHash == null. You can force this behavior (so called `geth` mode) by executing (mind trailing `--geth --force-ui` flags)
