@@ -17,6 +17,7 @@ COPY nfdev.json /var/parity/chains/nfdev.json
 COPY keys/ /var/parity/keys/nfdev/
 COPY password /var/parity/password
 COPY authcodes /var/parity/signer/authcodes
+COPY ./scripts/simulate_blocks.sh /var/parity/signer/simulate_blocks.sh
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
