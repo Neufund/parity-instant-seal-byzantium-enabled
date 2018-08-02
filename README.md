@@ -29,7 +29,7 @@ We put predefined authcodes into /var/parity/signer so if you connect remotely s
 ## Simulate new blocks
 If you want you can simulate new blocks that will be "mined" every 10s even if you won't issue any transactions. To enable this functionality you need to set env variable.
 ```
-SIMULATE_BLOCKS=true
+export SIMULATE_BLOCKS=true
 ```
 This will run a simple bash script that will run every 10s that will send 0eth transfer from one of the unlocked accounts to itself.
 
