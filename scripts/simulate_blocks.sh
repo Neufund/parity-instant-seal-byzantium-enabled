@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sleep 30
+
 if [[ "$SIMULATE_BLOCKS" != true ]] ; then
     echo "SIMULATE_BLOCK env variable not true - exiting"
     exit 1
