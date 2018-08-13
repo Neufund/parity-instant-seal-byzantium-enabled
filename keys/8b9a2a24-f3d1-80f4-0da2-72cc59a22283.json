@@ -1,0 +1,22 @@
+{
+    "address": "0020d330ef4de5c07d4271e0a67e8fd67a21d523",
+    "crypto": {
+        "cipher": "aes-128-ctr",
+        "cipherparams": {
+            "iv": "ffa958dbe0da2a8cb51a8d0fa67992b0"
+        },
+        "ciphertext": "255243432816e7ae467cd720cac3d460594cae4ee267abaa2243509359adeb69",
+        "kdf": "pbkdf2",
+        "kdfparams": {
+            "c": 10240,
+            "dklen": 32,
+            "prf": "hmac-sha256",
+            "salt": "cff447f8b4c0b029367a9668421d25dd770810234a1339b7a55ec98b0e592120"
+        },
+        "mac": "2d8c9def9da5f8e155c2f0da74663fe7e1aa870ad7ef9483d1c84099a8e35b20"
+    },
+    "id": "8b9a2a24-f3d1-80f4-0da2-72cc59a22283",
+    "meta": "{\"description\":\"\",\"passwordHint\":\"\",\"timestamp\":1534170473819}",
+    "name": "wallet_11",
+    "version": 3
+}
