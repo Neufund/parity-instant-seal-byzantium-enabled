@@ -7,6 +7,9 @@ if [[ "$SIMULATE_BLOCKS" != true ]] ; then
     exit 1
 fi
 
+FREQ=${BLOCKS_FREQ:-1}
+echo "New block will be mined every $FREQ seconds"
+
 while [ 1 ]
     do
     echo "`date` Sending transaction to simulate new block"
@@ -16,5 +19,5 @@ while [ 1 ]
       echo "Transaction didn't pass see output: $OUTPUT"
       exit 1
     fi
-    sleep 10
+    sleep ${FREQ}
 done
