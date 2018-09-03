@@ -1,0 +1,22 @@
+{
+    "address": "4b07fd23baa7198061caed44cf470b0f20ce1b7e",
+    "crypto": {
+        "cipher": "aes-128-ctr",
+        "cipherparams": {
+            "iv": "eb5971e93899f5bb7d8a2bf67ac88c9e"
+        },
+        "ciphertext": "6bd994ef1b928cfd5a46c0e10bec1fe86a01486fce5fc8f54f3cd0f53b17d44c",
+        "kdf": "pbkdf2",
+        "kdfparams": {
+            "c": 10240,
+            "dklen": 32,
+            "prf": "hmac-sha256",
+            "salt": "e14b8ab1b40342ee38d654535818a2fcbad4ddac51a32c50141b51798beab2cb"
+        },
+        "mac": "81ccee92a83dd8f43332abba370e898c5ac8c27e6ab8d2cff4430c67edd1399b"
+    },
+    "id": "e36c71e3-3944-4eb8-8ae1-bbd7db5b006c",
+    "meta": "{\"description\":\"\",\"passwordHint\":\"\",\"timestamp\":1536002802075}",
+    "name": "WALLET_22",
+    "version": 3
+}

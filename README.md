@@ -54,9 +54,9 @@ When deploying it's good idea to unlock your account. Command line was provided 
 * `testrpc` will return exception string `invalid opcode` and stack trace in `error` field of JSON-RPC response
 
 ### Adding unlocked accounts
-* Generate BIP39 24 word mnemonic - you can use [https://iancoleman.io/bip39](https://iancoleman.io/bip39)
+* Generate BIP39 English 24 word mnemonic - you can use [https://iancoleman.io/bip39](https://iancoleman.io/bip39)
+* Save `Private Key` and `Address` from first path `m/44'/60'/0'/0/0`
 * Use it in Parity UI to restore account - set password to `test`
 * Go to new account and export it. Save downloaded file in `/keys` directory
-* You can import saved file into [https://www.myetherwallet.com/#view-wallet-info](https://www.myetherwallet.com/#view-wallet-info) to check its private key.
 * Add address of created account to table in `nfdev.json` and give it some ETH
 * Add address of created account to `supervisord.conf` as `--unlock` parameter
