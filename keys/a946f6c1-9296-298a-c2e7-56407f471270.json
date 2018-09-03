@@ -1,0 +1,22 @@
+{
+    "address": "238fb566005f59fd5915dde954ab9fa7352da641",
+    "crypto": {
+        "cipher": "aes-128-ctr",
+        "cipherparams": {
+            "iv": "a78320cf198dc2aff1fc946cc3718342"
+        },
+        "ciphertext": "e52c90cf01542776cd89ff69edb22c16321c2f36ba16c67c9f8e4ea38f2894f5",
+        "kdf": "pbkdf2",
+        "kdfparams": {
+            "c": 10240,
+            "dklen": 32,
+            "prf": "hmac-sha256",
+            "salt": "07c002737f32aeca95c43841e9f4c1b74f87acb3ece86a9aae20a54a2cf4e42b"
+        },
+        "mac": "d879a0dbddf6b5bf879d1386df19345934c7b023584ce0ce2cb0b770735d9594"
+    },
+    "id": "a946f6c1-9296-298a-c2e7-56407f471270",
+    "meta": "{\"description\":\"\",\"passwordHint\":\"\",\"timestamp\":1536002279981}",
+    "name": "WALLET_19",
+    "version": 3
+}
