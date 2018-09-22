@@ -5,9 +5,8 @@ RUN apt-get update && \
     curl \
     supervisor;
 
-RUN curl --fail -o parity.deb http://d1h4xl4cr1h0mo.cloudfront.net/v1.9.7/x86_64-unknown-linux-gnu/parity_1.9.7_ubuntu_amd64.deb
-
-RUN dpkg -i parity.deb
+RUN curl --fail -o parity https://releases.parity.io/v2.0.6/x86_64-unknown-linux-gnu/parity
+RUN mv parity /usr/bin && chmod +x /usr/bin/parity
 
 RUN mkdir /var/parity && \
     mkdir /var/parity/keys && \
@@ -16,10 +15,9 @@ RUN mkdir /var/parity && \
 COPY nfdev.json /var/parity/chains/nfdev.json
 COPY keys/ /var/parity/keys/nfdev/
 COPY password /var/parity/password
-COPY authcodes /var/parity/signer/authcodes
-COPY ./scripts/simulate_blocks.sh /var/parity/signer/simulate_blocks.sh
+COPY ./scripts/simulate_blocks.sh /var/parity/simulate_blocks.sh
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-EXPOSE 8080 8545 8546 8180 30303
+EXPOSE 8080 8545 8546 30303
 CMD ["/usr/bin/supervisord"]
