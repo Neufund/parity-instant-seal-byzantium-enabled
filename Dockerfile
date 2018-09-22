@@ -5,9 +5,8 @@ RUN apt-get update && \
     curl \
     supervisor;
 
-RUN curl --fail -o parity.deb http://d1h4xl4cr1h0mo.cloudfront.net/v1.9.7/x86_64-unknown-linux-gnu/parity_1.9.7_ubuntu_amd64.deb
-
-RUN dpkg -i parity.deb
+RUN curl --fail -o parity https://releases.parity.io/v2.0.6/x86_64-unknown-linux-gnu/parity
+RUN mv parity /usr/bin && chmod +x /usr/bin/parity
 
 RUN mkdir /var/parity && \
     mkdir /var/parity/keys && \
