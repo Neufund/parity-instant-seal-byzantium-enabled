@@ -5,7 +5,7 @@ RUN apt-get update && \
     curl \
     supervisor;
 
-RUN curl --fail -o parity.deb http://d1h4xl4cr1h0mo.cloudfront.net/v1.9.7/x86_64-unknown-linux-gnu/parity_1.9.7_ubuntu_amd64.deb
+RUN curl --fail -L -o parity.deb "https://drive.google.com/uc?id=1v0L7ZFs9tzlfktmIC36DqtzPaaZZTqYe&export=download"
 
 RUN dpkg -i parity.deb
 
