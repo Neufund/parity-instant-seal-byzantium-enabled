@@ -5,7 +5,7 @@ RUN apt-get update && \
     curl \
     supervisor;
 
-RUN curl --fail -L -o parity.deb https://drive.google.com/uc?id=1v0L7ZFs9tzlfktmIC36DqtzPaaZZTqYe&export=download
+RUN curl --fail -L -o parity.deb "https://drive.google.com/uc?id=1v0L7ZFs9tzlfktmIC36DqtzPaaZZTqYe&export=download"
 
 RUN dpkg -i parity.deb
 
