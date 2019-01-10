@@ -64,3 +64,8 @@ When deploying it's good idea to unlock your account. Command line was provided 
 * Go to new account and export it. Save downloaded file in `/keys` directory
 * Add address of created account to table in `nfdev.json` and give it some ETH
 * Add address of created account to `supervisord.conf` as `--unlock` parameter
+
+Recepie was changing during time so here we have a bit mess in our unlocked accounts:
+- Wallets 1-9 are using `m/44'/60'/0'/0` derivation path
+- Wallets 10-18 are using unknown derivation path
+- Wallets 19-24 are using `m/44'/60'/0'/0/0` derivation path
