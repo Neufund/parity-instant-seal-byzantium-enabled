@@ -1,0 +1,22 @@
+{
+    "address": "798fd195575d195b9bb9619ffb905e434f044f1d",
+    "crypto": {
+        "cipher": "aes-128-ctr",
+        "cipherparams": {
+            "iv": "7e200601a9a629a2fe516c18b35e4841"
+        },
+        "ciphertext": "b25ab59c161330b249b3815a6b1fc4a57aa60a2936646b8a49b1d56257a8eba8",
+        "kdf": "pbkdf2",
+        "kdfparams": {
+            "c": 10240,
+            "dklen": 32,
+            "prf": "hmac-sha256",
+            "salt": "7c469af45c7b9c1843e506eed04247b7ceb29bcf0cbb24387cc3acf0c9e185e4"
+        },
+        "mac": "676f37c3f0bb057956622677106ea77eb08e4861dae576a549620380fd1494a7"
+    },
+    "id": "1fc9727c-b05b-4b5d-6d7e-0fd33a9819b0",
+    "meta": "{\"description\":\"\",\"passwordHint\":\"test\",\"timestamp\":1547555998377}",
+    "name": "WALLET_27",
+    "version": 3
+}
