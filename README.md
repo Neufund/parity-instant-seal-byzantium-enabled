@@ -68,4 +68,4 @@ When deploying it's good idea to unlock your account. Command line was provided 
 Recepie was changing during time so here we have a bit mess in our unlocked accounts:
 - Wallets 1-9 are using `m/44'/60'/0'/0` derivation path
 - Wallets 10-18 are using unknown derivation path
-- Wallets 19-24 are using `m/44'/60'/0'/0/0` derivation path
+- Wallets 19-28 are using `m/44'/60'/0'/0/0` derivation path
