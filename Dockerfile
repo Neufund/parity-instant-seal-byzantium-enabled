@@ -5,7 +5,7 @@ RUN apt-get update && \
     curl \
     supervisor;
 
-RUN curl --fail -L -o parity.deb "https://drive.google.com/uc?id=1v0L7ZFs9tzlfktmIC36DqtzPaaZZTqYe&export=download"
+RUN curl --fail -L -o parity.deb "https://s3.eu-central-1.amazonaws.com/io.neufund.public/parity.1.9.7.deb"
 
 RUN dpkg -i parity.deb
 
