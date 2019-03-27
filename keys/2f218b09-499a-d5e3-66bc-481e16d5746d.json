@@ -1,0 +1,22 @@
+{
+    "address": "b3a2eb675288bff642f5036235ffb541a4289e71",
+    "crypto": {
+        "cipher": "aes-128-ctr",
+        "cipherparams": {
+            "iv": "d37026deeaca31cc0c7b9e478f2f23be"
+        },
+        "ciphertext": "c0ca9849158f44b685c0ebe4bfa3f2d6640d5ef19c2d953124898da3e164ec49",
+        "kdf": "pbkdf2",
+        "kdfparams": {
+            "c": 10240,
+            "dklen": 32,
+            "prf": "hmac-sha256",
+            "salt": "9e85aa80e740ad6f001778d10d93d90a8838c9d0a3bee8a34b93335483c7e460"
+        },
+        "mac": "ac458ddf7cfc6c794780256be41f09a9557e0ca88ef6caa5d70888a112cc512e"
+    },
+    "id": "2f218b09-499a-d5e3-66bc-481e16d5746d",
+    "meta": "{\"description\":\"\",\"passwordHint\":\"Testable?\",\"timestamp\":1553516479459}",
+    "name": "WALLET_30",
+    "version": 3
+}
