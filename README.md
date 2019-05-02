@@ -60,8 +60,7 @@ When deploying it's good idea to unlock your account. Command line was provided 
 ### Adding unlocked accounts
 * Generate BIP39 English 24 word mnemonic - you can use [https://iancoleman.io/bip39](https://iancoleman.io/bip39)
 * Save `Private Key` and `Address` from first path `m/44'/60'/0'/0/0`
-* Use it in Parity UI to restore account - set password to `test`
-* Start the node using `make run` and go to `http://127.0.0.1:8180`
+* Start the node using `make run` and go to `http://127.0.0.1:8180` to open Parity UI
 * Go to `Accounts` and `+Accounts  -> PRIVATE KEY`. Use generated private key and set password to `test`.
 * Go to new account and export it. Save downloaded file in `/keys` directory
 * Add address of created account to table in `nfdev.json` and give it some ETH
