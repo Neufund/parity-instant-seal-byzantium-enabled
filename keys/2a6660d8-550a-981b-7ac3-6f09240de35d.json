@@ -1,0 +1,22 @@
+{
+    "address": "619f0a73f02b8ac8f58440c21e15a461e69011a5",
+    "crypto": {
+        "cipher": "aes-128-ctr",
+        "cipherparams": {
+            "iv": "d5b69d0ff0d8eeb2d2c3c1489c70afce"
+        },
+        "ciphertext": "90e3034eef54246fdb02b3e8d253bc534f2f360065fb214f7fd4df11ff85b88e",
+        "kdf": "pbkdf2",
+        "kdfparams": {
+            "c": 10240,
+            "dklen": 32,
+            "prf": "hmac-sha256",
+            "salt": "26e7bf620cd96aa46e01d4e49541a6ea92ef9c4aa739190674062d61c08a53a7"
+        },
+        "mac": "24950c94c90194d2c48f3e5ac7dc44ab2d15a599bbe6cb954ab4c4a56cf14194"
+    },
+    "id": "2a6660d8-550a-981b-7ac3-6f09240de35d",
+    "meta": "{\"description\":\"\",\"passwordHint\":\"\",\"timestamp\":1557837184179}",
+    "name": "WALLET_36",
+    "version": 3
+}
