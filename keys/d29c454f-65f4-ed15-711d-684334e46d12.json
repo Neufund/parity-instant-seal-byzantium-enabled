@@ -1,0 +1,22 @@
+{
+    "address": "619f0a73f02b8ac8f58440c21e15a461e69011a5",
+    "crypto": {
+        "cipher": "aes-128-ctr",
+        "cipherparams": {
+            "iv": "c5b6752878f0d8e06e9098e6d0b1126a"
+        },
+        "ciphertext": "d421b089d81c345721b896cc9364a14ab3ac15bbca268c622084239fc4719d08",
+        "kdf": "pbkdf2",
+        "kdfparams": {
+            "c": 10240,
+            "dklen": 32,
+            "prf": "hmac-sha256",
+            "salt": "5a3fb090932b51b3dab132ac1327a376f626cc44632d4772774dd15f6b72d2b1"
+        },
+        "mac": "6836d20a39a35748fdfae68cd47ffc24b725d85da6550e3fb08b5153b5d5be17"
+    },
+    "id": "d29c454f-65f4-ed15-711d-684334e46d12",
+    "meta": "{\"description\":\"\",\"passwordHint\":\"\",\"timestamp\":1557928966549}",
+    "name": "INV_EUR_ICBM_HAS_KYC_2",
+    "version": 3
+}
