@@ -1,0 +1,22 @@
+{
+    "address": "a6f99fb42828965439b5d6d2d4153eb68ba376f7",
+    "crypto": {
+        "cipher": "aes-128-ctr",
+        "cipherparams": {
+            "iv": "267ac5c826dc8161957e365794c89e51"
+        },
+        "ciphertext": "f79d6ebfaafbdefae45f7cf3c2c8f19fd5890967b9b5dc6f2d5330d79866b52d",
+        "kdf": "pbkdf2",
+        "kdfparams": {
+            "c": 10240,
+            "dklen": 32,
+            "prf": "hmac-sha256",
+            "salt": "1fc34ec8a347b165122aaac3466a5a0f3b9f28fd74e2e1192e7f9aa50aac3f3e"
+        },
+        "mac": "06e4f2d13c39f0d71599fe77de88d9f4f5e6555c7d86a26d87ccdb195cf519e2"
+    },
+    "id": "625a8b80-bf96-886c-7e2b-2401c2544a81",
+    "meta": "{\"description\":\"\",\"passwordHint\":\"\",\"timestamp\":1556622081577}",
+    "name": "WALLET_35",
+    "version": 3
+}
