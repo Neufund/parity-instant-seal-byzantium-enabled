@@ -6,5 +6,4 @@ services:
      - "30303:30303"       
      - "8545:8545"
      - "8546:8546"
-     - "8180:8180"
-    restart: always     
+    restart: always
