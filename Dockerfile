@@ -15,7 +15,8 @@ RUN mkdir /var/parity && \
 COPY nfdev.json /var/parity/chains/nfdev.json
 COPY keys/ /var/parity/keys/nfdev/
 COPY password /var/parity/password
-COPY ./scripts/simulate_blocks.sh /var/parity/simulate_blocks.sh
+COPY ./scripts/* /var/parity/
+RUN chmod +x /var/parity/*.sh
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
