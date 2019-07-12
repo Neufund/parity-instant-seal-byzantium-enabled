@@ -11,3 +11,6 @@ run: container
 
 down:
 	docker-compose -p eth_parity_dev_node -f docker-compose.yml down
+
+simulate-blocks:
+	docker-compose -p eth_parity_dev_node -f docker-compose.yml exec -d -T eth_parity_dev_node sh -c "SIMULATE_BLOCKS=true BLOCKS_FREQ=1 /var/parity/simulate_blocks.sh"
