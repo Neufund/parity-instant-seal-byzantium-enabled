@@ -1,22 +1,28 @@
 FROM ubuntu:xenial
 
+WORKDIR /build
+# install tools and dependencies
 RUN apt-get update && \
-    apt-get install -y \
-    curl \
-    supervisor;
+        apt-get install -y \
+        curl \
+        wget \
+        unzip \
+        supervisor;
 
-RUN curl --fail -o parity https://releases.parity.io/ethereum/v2.5.10/x86_64-unknown-linux-gnu/parity
-RUN mv parity /usr/bin && chmod +x /usr/bin/parity
+# build openethereum
+RUN wget https://github.com/openethereum/openethereum/releases/download/v3.1.0/openethereum-linux-v3.1.0.zip && \
+    unzip /build/openethereum-linux-v3.1.0.zip && \
+    chmod u+x /build/openethereum
 
-RUN mkdir /var/parity && \
-    mkdir /var/parity/keys && \
-    mkdir /var/parity/keys/nfdev/;
+RUN mkdir /var/openethereum && \
+    mkdir /var/openethereum/keys && \
+    mkdir /var/openethereum/keys/nfdev/;
 
-COPY nfdev.json /var/parity/chains/nfdev.json
-COPY keys/ /var/parity/keys/nfdev/
-COPY password /var/parity/password
-COPY ./scripts/* /var/parity/
-RUN chmod +x /var/parity/*.sh
+COPY nfdev.json /var/openethereum/chains/nfdev.json
+COPY keys/ /var/openethereum/keys/nfdev/
+COPY password /var/openethereum/password
+COPY ./scripts/* /var/openethereum/
+RUN chmod +x /var/openethereum/*.sh
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
