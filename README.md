@@ -1,6 +1,6 @@
-# Parity with instantSeal engine and byzantium EIPs enabled
+# Open Ethereum with instantSeal engine and byzantium EIPs enabled
 
-This is parity instantSeal byzantium enabled development mode
+This is the open ethereum instantSeal byzantium enabled development node used primarily in platform-backend.
 
 ## Getting Started
 
@@ -10,15 +10,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 Clone repository and build docker container
 ```
-docker-compose -p eth_parity_dev_node -f docker-compose.yml up --build -d
+make run
 ```
-In case of linux run
-```
-sudo docker-compose -p eth_parity_dev_node -f docker-compose.yml up --build -d
-```
-### Parity version
+### Open ethereum version
 
-We use `parity_1.9.7_ubuntu_amd64.deb` from parity website.
+We use `v3.1.0`.
 
 ## Connecting to node
 
@@ -28,14 +24,14 @@ To connect to web interface of the node
 http://127.0.0.1:8180/
 ```
 
-We put predefined authcodes into /var/parity/signer so if you connect remotely see `authcodes` file. Also remember to expose 8546 port (web socket), otherwise UI will not log in.
-
 ## Simulate new blocks
 If you want you can simulate new blocks that will be "mined" automatically even if you won't issue any transactions. To enable this functionality you need to set env variable.
+
 ```
 export SIMULATE_BLOCKS=true
 ```
 Script simulates new transactions by regularly sending 0eth transfer from one of the unlocked accounts to itself. Default time between blocks is 10s. But you can change it by setting `BLOCKS_FREQ` env variable.
+
  ```
  export BLOCKS_FREQ=5
  ```
@@ -49,10 +45,12 @@ When deploying it's good idea to unlock your account. Command line was provided 
 ### Byzantium and pre-byzantium error handling for calls and transaction
 
 **Calling constant method that reverts**
+
 * pre-byzantium and post byzantium parity will return `result: 0x` (0x in result field of JSON-RPC response). Clearly it does not look as the error code ;> and if you are using web3, it will try to decode and fail specific expection per expected data type returned (like invalid BigNumber or address), some types will just succeed so **BEWARE**
 * `testrpc` will return exception string `invalid opcode` and stack trace in `error` field of JSON-RPC response
 
 **Executing transactions that revert**
+
 * pre-byzantium parity - normal transaction object and transaction receipt are returned (just with all gas used). there is no other way to detect revert besides generating and checking events in case of success (so lack of event is error situation). this is very weak
 * post-byzantium parity and other nodes - there is `status` field in transaction receipt! use this. use Neufund modified truffle that recognize this situation (https://github.com/Neufund/truffle), `neufund` branch.
 * `testrpc` will return exception string `invalid opcode` and stack trace in `error` field of JSON-RPC response
