@@ -178,7 +178,7 @@
     "0x0000000000000000000000000000000000000009": {
       "builtin": {
         "name": "blake2_f",
-        "activate_at": "0x8a61c8",
+        "activate_at": "0x00",
         "pricing": {
           "blake2_f": {
             "gas_per_round": 1
