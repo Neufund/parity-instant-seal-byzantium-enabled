@@ -90,16 +90,8 @@
       "builtin": {
         "name": "modexp",
         "pricing": {
-          "0x42ae50": {
-            "info": "EIP-198: Big integer modular exponentiation. Byzantium hardfork (4_370_000)",
-            "price": {
-              "modexp": {
-                "divisor": 20
-              }
-            }
-          },
-          "0xbad420": {
-            "info": "EIP-2565: ModExp Gas Cost. Berlin hardfork (12_244_000)",
+          "0": {
+            "info": "EIP-2565: ModExp Gas Cost. Berlin hardfork",
             "price": {
               "modexp2565": {}
             }
@@ -111,15 +103,8 @@
       "builtin": {
         "name": "alt_bn128_add",
         "pricing": {
-          "0x42ae50": {
-            "price": {
-              "alt_bn128_const_operations": {
-                "price": 500
-              }
-            }
-          },
-          "0x8a61c8": {
-            "info": "EIP 1108 transition at block 9_069_000 (0x8a61c8)",
+          "0": {
+            "info": "EIP 1108 transition",
             "price": {
               "alt_bn128_const_operations": {
                 "price": 150
@@ -133,15 +118,8 @@
       "builtin": {
         "name": "alt_bn128_mul",
         "pricing": {
-          "0x42ae50": {
-            "price": {
-              "alt_bn128_const_operations": {
-                "price": 40000
-              }
-            }
-          },
-          "0x8a61c8": {
-            "info": "EIP 1108 transition at block 9_069_000 (0x8a61c8)",
+          "0": {
+            "info": "EIP 1108 transition",
             "price": {
               "alt_bn128_const_operations": {
                 "price": 6000
@@ -155,16 +133,8 @@
       "builtin": {
         "name": "alt_bn128_pairing",
         "pricing": {
-          "0x42ae50": {
-            "price": {
-              "alt_bn128_pairing": {
-                "base": 100000,
-                "pair": 80000
-              }
-            }
-          },
-          "0x8a61c8": {
-            "info": "EIP 1108 transition at block 9_069_000 (0x8a61c8)",
+          "0": {
+            "info": "EIP 1108 transition",
             "price": {
               "alt_bn128_pairing": {
                 "base": 45000,
