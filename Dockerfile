@@ -10,8 +10,8 @@ RUN apt-get update && \
         supervisor;
 
 # build openethereum
-RUN wget https://github.com/openethereum/openethereum/releases/download/v3.1.0/openethereum-linux-v3.1.0.zip && \
-    unzip /build/openethereum-linux-v3.1.0.zip && \
+RUN wget https://github.com/openethereum/openethereum/releases/download/v3.2.0/openethereum-linux-v3.2.0.zip && \
+    unzip /build/openethereum-linux-v3.2.0.zip && \
     chmod u+x /build/openethereum
 
 RUN mkdir /var/openethereum && \
